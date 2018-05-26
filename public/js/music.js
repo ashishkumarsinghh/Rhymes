@@ -32,8 +32,8 @@ function addMusic(){
           }
           else{
             let btn = document.getElementById("play_pause");
-              btn.classList.remove("pause");
-              btn.classList.add("play");
+            btn.classList.remove("pause");
+            btn.classList.add("play");
 
 
           }
@@ -44,12 +44,67 @@ function addMusic(){
         mlist.appendChild(music_item);
       }
     });
-    });
+  });
 
 
 }
 
 
+function nextSong(){
+  let audio_elem = document.getElementById("audio");
+  let source = document.getElementById('audiosource');
+  if(musiclist.length>0){
+    if(musiclist.indexOf(selection)+1>musiclist.length-1){
+      selection = musiclist[0];
+    }
+    else{
+      selection = musiclist[musiclist.indexOf(selection)+1];
+    }
+
+  }
+  audio_elem.pause();
+  source.src = selection;
+  audio_elem.load();
+  audio_elem.play();
+  if(audio_elem.paused){
+    let btn = document.getElementById("play_pause");
+    btn.classList.remove("play");
+    btn.classList.add("pause");
+  }    else{
+    let btn = document.getElementById("play_pause");
+    btn.classList.remove("pause");
+    btn.classList.add("play");
+  }
+
+}
+function prevSong(){
+
+    let audio_elem = document.getElementById("audio");
+    let source = document.getElementById('audiosource');
+    if(musiclist.length>0){
+      if(musiclist.indexOf(selection)-1<0){
+        selection = musiclist[musiclist.length-1];
+      }
+      else{
+        selection = musiclist[musiclist.indexOf(selection)-1];
+      }
+
+    }
+    audio_elem.pause();
+    source.src = selection;
+    audio_elem.load();
+    audio_elem.play();
+    if(audio_elem.paused){
+      let btn = document.getElementById("play_pause");
+      btn.classList.remove("play");
+      btn.classList.add("pause");
+    }    else{
+      let btn = document.getElementById("play_pause");
+      btn.classList.remove("pause");
+      btn.classList.add("play");
+    }
+
+}
 
 function btnplayMe(){
   let audio_elem = document.getElementById("audio");
