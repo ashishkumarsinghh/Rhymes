@@ -6,4 +6,4 @@ Electron, Semantic UI
 
 # Screen
  
- ![Alt text]( Rhymes/public/Screenshot.png?raw=true "The basic first look.")
+ ![Alt text]( /public/Screenshot.png?raw=true "The basic first look.")
