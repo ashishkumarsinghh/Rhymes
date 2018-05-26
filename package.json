@@ -1,0 +1,15 @@
+{
+  "name": "Rhymes",
+  "version": "1.0.0",
+  "description": "Music Player application.",
+  "main": "index.js",
+  "repository": "git@github.com:ashishkumarsinghh/Rhymes.git",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "ashishkumarsinghh <ashishkumarsinghh@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}

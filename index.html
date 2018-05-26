@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Rhymes</title>
+      <link rel="stylesheet" href="./public/css/semantic.min.css" />
+      <link rel="stylesheet" href="./public/css/index.css"/>
+    </head>
+    <body>
+      <div class="ui grid">
+        <div class="column topbar">
+          <h1 class="ui white header myheader">Rhymes</h1>
+        </div>
+      </div>
+
+      <div class="ui grid">
+        <div class="eight wide centered column footer">
+          <audio id="audio">
+            <source id="audiosource" src=""></source>
+          </audio>
+          <div class="btn_controls">
+            <button class="circular basic ui icon button">
+              <i class="angle double left icon"></i>
+            </button>
+
+            <button class="circular basic massive ui icon button" onclick="btnplayMe()" >
+              <i class="play icon" id="play_pause"></i>
+            </button>
+
+            <button class="circular basic ui icon button">
+              <i class="angle double right icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ui grid">
+        <div class="eight wide centered column">
+          <button class="fluid positive ui button" id="open-file-manager" onclick="addMusic()">Add Music Folder.</button>
+        </div>
+      </div>
+      <div class="ui grid">
+        <div class="five wide centered column">
+          <div class="eleven wide column contents">
+            <div id="musiclist" class="ui divided selection list">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script src="./public/js/music.js"></script>
+    </body>
+  </html>
